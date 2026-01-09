@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Edra.Application\Edra.Application.csproj" />
+    <ProjectReference Include="..\Edra.Infrastructure\Edra.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
