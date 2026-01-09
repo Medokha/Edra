@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="IServices\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Edra.Infrastructure\Edra.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Edra.Infrastructure\Edra.Infrastructure.csproj" />
+    <Folder Include="IServices\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

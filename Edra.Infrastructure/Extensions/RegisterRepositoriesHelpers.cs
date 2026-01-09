@@ -1,4 +1,6 @@
-﻿using Edra.Infrastructure.Context;
+﻿using Edra.Domain.Interfaces;
+using Edra.Infrastructure.Context;
+using Edra.Infrastructure.Repositories.UserResolve;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +16,8 @@ namespace Edra.Infrastructure.Extensions
             builder.Services.AddDbContext<EdraDbContext>(option =>
                                          option.UseSqlServer(builder.Configuration.GetConnectionString("EdraConnection")));
             builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<EdraDbContext>().AddDefaultTokenProviders();
+
+            builder.Services.AddScoped<IUserResolveHandler, UserResolveHandler>();
         }
     }
 }
